@@ -1,0 +1,55 @@
+{
+  "name": "typescript-clean-architecture-api-boilerplate",
+  "version": "1.0.0",
+  "description": "TypeScript - Clean Architecture API Boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only src/app.ts",
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "postinstall": "prisma generate && prisma db push && tsc",
+    "deps:clear": "rimraf node_modules package-lock.json",
+    "deps:reset": "npm run deps:clear && npm install"
+  },
+  "engines": {
+    "node": "~20.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ed4ru/typescript-clean-architecture-api-boilerplate.git"
+  },
+  "author": "Arnaud de Cuniac <Ed4ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ed4ru/typescript-clean-architecture-api-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Ed4ru/typescript-clean-architecture-api-boilerplate#readme",
+  "dependencies": {
+    "@prisma/client": "~5.1.1",
+    "bcrypt": "~5.1.0",
+    "config": "~3.3.9",
+    "cookie-parser": "~1.4.6",
+    "cors": "~2.8.5",
+    "dotenv": "~16.3.1",
+    "express": "~4.18.2",
+    "helmet": "~7.0.0",
+    "jsonwebtoken": "~9.0.1",
+    "nodemailer": "~6.9.4",
+    "prisma": "~5.1.1",
+    "zod": "~3.21.4"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "~5.0.0",
+    "@types/config": "~3.3.0",
+    "@types/cookie-parser": "~1.4.3",
+    "@types/cors": "~2.8.13",
+    "@types/express": "~4.17.17",
+    "@types/jsonwebtoken": "~9.0.2",
+    "@types/node": "~20.4.10",
+    "@types/nodemailer": "~6.4.9",
+    "rimraf": "~5.0.1",
+    "ts-node-dev": "~2.0.0",
+    "tsconfig-paths": "~4.2.0",
+    "typescript": "~5.1.6"
+  }
+}
