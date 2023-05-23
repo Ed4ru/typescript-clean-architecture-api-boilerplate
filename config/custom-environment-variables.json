@@ -1,0 +1,17 @@
+{
+  "apiUri": "API_URI",
+  "clientUri": "CLIENT_URI",
+  "port": "PORT",
+  "environment": "NODE_ENV",
+
+  "publicKey": "PUBLIC_KEY",
+  "privateKey": "PRIVATE_KEY",
+
+  "dbUri": "DATABASE_URI",
+
+  "emailService": "EMAIL_SERVICE",
+  "emailUser": "EMAIL_USER",
+  "emailClientId": "EMAIL_CLIENT_ID",
+  "emailClientSecret": "EMAIL_CLIENT_SECRET",
+  "emailRefreshToken": "EMAIL_REFRESH_TOKEN"
+}
