@@ -52,13 +52,13 @@ export const resetPasswordUsecase = async (
   const setNewPasswordUrl = `${clientUri}/set-password?id=${foundUser.id}&token=${token}`;
   const emailData = {
     email: foundUser.email,
-    subject: 'API Boilerplate - Réinitialisation du mot de passe',
-    text: `Bonjour,
+    subject: 'API Boilerplate - Password Reset',
+    text: `Hello,
 
-    Veuillez cliquer sur le lien ci-dessous afin de réinitialiser votre mot de passe : ${setNewPasswordUrl}`,
-    html: `<h1>Bonjour</h1>
-    <p>Veuillez cliquer sur le lien ci-dessous afin de réinitialiser votre mot de passe :</p>
-    <p><a href="${setNewPasswordUrl}">Réinitialiser le mot de passe</a></p>`,
+    Please click on the link below to reset your password : ${setNewPasswordUrl}`,
+    html: `<h1>Hello</h1>
+    <p>Please click on the link below to reset your password :</p>
+    <p><a href="${setNewPasswordUrl}">Reset my password</a></p>`,
   };
 
   emailService.sendEmail(emailData);
